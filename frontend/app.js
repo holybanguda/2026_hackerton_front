@@ -1230,8 +1230,7 @@ function reanalyzeFromHistory() {
   })
       .then(response => {
         if (!response.ok) throw new Error("추천 요청 실패");
-        return response.json();
-      })
+        return response.json(); })
       .then(data => {
         console.log("히스토리 기반 AI 재추천 응답 성공:", data);
 
