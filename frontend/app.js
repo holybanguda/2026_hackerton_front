@@ -199,7 +199,7 @@ function startAnalysis({ reanalyseCurrent = false } = {}) {
 
   showScreen('analysis-screen', 'home-screen');
 
-  fetch('http://localhost:8080/api/recommendation', {
+  fetch('2026hackertonback-production.up.railway.app/api/recommendation', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(requestData)
@@ -259,7 +259,7 @@ async function startQrCamera() {
           try {
             notify('QR 코드를 인식했습니다. 백엔드로 전송');
 
-            const response = await fetch("http://localhost:8080/api/menu/scan", {
+            const response = await fetch("2026hackertonback-production.up.railway.app/api/menu/scan", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ restaurantUrl: decodedText })
@@ -734,7 +734,7 @@ document.querySelector("#traits-next").addEventListener("click", () => {
   notify("입력 정보를 바탕으로 메뉴를 분석합니다.");
 
   showScreen("analysis-screen", "home-screen");
-  fetch("http://localhost:8080/api/recommendation", {
+  fetch("2026hackertonback-production.up.railway.app/api/recommendation", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(recommendationRequest),
@@ -1223,7 +1223,7 @@ function reanalyzeFromHistory() {
 
   showScreen('analysis-screen', 'home-screen');
 
-  fetch('http://localhost:8080/api/recommendation', {
+  fetch('2026hackertonback-production.up.railway.app/api/recommendation', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(requestData)
