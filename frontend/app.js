@@ -1287,8 +1287,7 @@ replaceControl('#result-screen .result-actions button:last-child', async () => {
     });
 
     if (!response.ok) {
-      throw new Error(`DB 저장 실패 (상태 코드: ${response.status})`);
-    }
+      throw new Error(`DB 저장 실패 (상태 코드: ${response.status})`); }
 
     const savedData = await response.json();
     console.log("DB 저장 성공:", savedData);
